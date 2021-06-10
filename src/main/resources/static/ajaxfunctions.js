@@ -89,7 +89,7 @@ $("#updateParish").click(function() {
         data: JSON.stringify(parishData),
         success: function () {
            let html =` ${parishData.name} ${parishData.parishCode} ${parishData.infectionPressure} ${parishData.shutDownTime}
-                        <button onclick="parishDelete(${parishData.id})">
+                        <button class="btn btn-danger" style="margin: 5px" onclick="parishDelete(${parishData.id})">
                             Delete
                          </button> 
                          Parish shutdown
