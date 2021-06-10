@@ -74,7 +74,7 @@ $("#updateParish").click(function() {
         name: $('#parishName').val(),
         infectionPressure: $('#infectionPressure').val(),
         shutDownTime: $('#shutDownTime').val(),
-        communeId: parseInt($('#commune').val())
+        commune: parseInt($('#commune').val())
 
     };
 
