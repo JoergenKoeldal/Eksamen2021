@@ -8,10 +8,11 @@ function getParish() {
             $.each(parishData, function (index, parishData) { //iterer over collection i data
                 const html = `
                     <div id="parishId-${parishData.id}">
-                        ${parishData.name} ${parishData.parishCode} ${parishData.infectionPressure} ${parishData.shutDownTime}
-                        <button onclick="parishDelete(${parishData.id})">
+                        ${parishData.id} ${parishData.name} ${parishData.parishCode} ${parishData.infectionPressure} ${parishData.shutDownTime}
+                        <button class="btn btn-danger" style="margin: 5px" onclick="parishDelete(${parishData.id}) ">
                             Delete
                          </button> 
+                          Parish shutdown
                           <input onclick="return false;" type="checkbox" id="checkBoxId" ${compareDate(parishData.shutDownTime) ? "checked" : ""}>
                      </div>
                 `
@@ -91,6 +92,7 @@ $("#updateParish").click(function() {
                         <button onclick="parishDelete(${parishData.id})">
                             Delete
                          </button> 
+                         Parish shutdown
                           <input type="checkbox" id="checkBoxId" ${compareDate(parishData.shutDownTime) ? "checked" : ""}>`;
             $(`#parishId-${parishData.id}`).html(html)
         }
